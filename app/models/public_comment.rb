@@ -2,6 +2,10 @@ class PublicComment < Comment
 
   after_create :create_notifications, :send_emails
 
+  def public?
+    true
+  end
+
   private
 
   # Send emails to speakers when reviewer creates a comment

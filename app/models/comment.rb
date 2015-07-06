@@ -7,7 +7,7 @@ class Comment < ActiveRecord::Base
   validates :body, presence: true
 
   def public?
-    type == "PublicComment"
+    false
   end
 end
 
